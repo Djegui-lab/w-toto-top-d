@@ -4,7 +4,7 @@ from google.oauth2.service_account import Credentials
 import pandas as pd
 import os
 # Définir le chemin du fichier JSON directement
-json_file_path = "courtier-devis-automatique-e47e170f58f7.json"
+json_file_path = "smart-ratio-417418-126d06ea07c6.json"
 
 # Vérifiez si le fichier existe
 if not os.path.exists(json_file_path):
