@@ -4,11 +4,11 @@ from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
 import os
-
-json_file_path = os.getenv("GOOGLE_SHEETS_JSON_PATH")
-if not json_file_path or not os.path.exists(json_file_path):
-    raise FileNotFoundError("Le fichier JSON est introuvable ou la variable d'environnement n'est pas définie.")
-
+# Fonction pour l'authentification Google Sheets
+def authenticate_google_sheets():
+    json_file_path = os.getenv("GOOGLE_SHEETS_JSON_PATH")
+    if not json_file_path or not os.path.exists(json_file_path):
+        raise FileNotFoundError("Le fichier JSON est introuvable ou la variable d'environnement n'est pas définie.")
     
     # Portée de l'API Google Sheets
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
