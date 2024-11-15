@@ -17,3 +17,7 @@ __pycache__/
 
 # Fichier .env (variables d'environnement locales)
 .env
+
+# Ignorer les fichiers de test
+test.py
+toto.py
