@@ -2,15 +2,19 @@ import streamlit as st
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
-import os
-# Définir le chemin du fichier JSON directement
-json_file_path = "smart-ratio-417418-126d06ea07c6.json"
+
+# Chemin du fichier JSON (directement spécifié ici)
+json_file_path = "smart-ratio-417418-126d06ea07c6.json"  # Remplacez par le chemin correct si nécessaire
 
 # Vérifiez si le fichier existe
-if not os.path.exists(json_file_path):
+try:
+    with open(json_file_path) as f:
+        pass
+except FileNotFoundError:
     st.error(f"Le fichier JSON à l'emplacement {json_file_path} est introuvable.")
-else:
-    st.success(f"Le fichier JSON a été trouvé à l'emplacement : {json_file_path}")
+    raise
+
+print(f"Le fichier JSON a été trouvé à l'emplacement : {json_file_path}")
 
 # Portée de l'API Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -23,7 +27,7 @@ client = gspread.authorize(creds)
 
 # Lire les données de Google Sheets
 def get_data_from_sheets(sheet_id, sheet_name):
-    # Ouvrir la feuille par son ID et son nom
+    # Utilisation de 'client' déjà autorisé pour accéder aux données
     sheet = client.open_by_key(sheet_id).worksheet(sheet_name)
 
     # Obtenir toutes les données de la feuille
@@ -66,3 +70,4 @@ def app():
 # Lancer l'application Streamlit
 if __name__ == "__main__":
     app()
+
