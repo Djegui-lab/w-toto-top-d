@@ -1,32 +1,32 @@
 import streamlit as st
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 import pandas as pd
-
 import os
-# Fonction pour l'authentification Google Sheets
-def authenticate_google_sheets():
-    json_file_path = os.getenv("GOOGLE_SHEETS_JSON_PATH")
-    if not json_file_path or not os.path.exists(json_file_path):
-        raise FileNotFoundError("Le fichier JSON est introuvable ou la variable d'environnement n'est pas définie.")
-    
-    # Portée de l'API Google Sheets
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name(json_file_path, scope)
-    
-    # Autoriser l'accès via gspread
-    client = gspread.authorize(creds)
-    return client
+
+json_file_path = os.getenv("GOOGLE_SHEETS_JSON_PATH")
+if not json_file_path or not os.path.exists(json_file_path):
+    raise FileNotFoundError("Le fichier JSON est introuvable ou la variable d'environnement n'est pas définie.")
+
+# Portée de l'API Google Sheets
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+
+# Charger les informations d'identification à partir du fichier JSON
+creds = Credentials.from_service_account_file(json_file_path, scopes=scope)
+
+# Autoriser l'accès via gspread
+client = gspread.authorize(creds)
+
 # Lire les données de Google Sheets
 def get_data_from_sheets(sheet_id, sheet_name):
     client = authenticate_google_sheets()
-    
+
     # Ouvrir la feuille par son ID et son nom
     sheet = client.open_by_key(sheet_id).worksheet(sheet_name)
-    
+
     # Obtenir toutes les données de la feuille
     data = sheet.get_all_records()
-    
+
     # Convertir les données en DataFrame
     df = pd.DataFrame(data)
     return df
