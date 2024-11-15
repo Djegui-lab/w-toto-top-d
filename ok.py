@@ -1,57 +1,22 @@
 import streamlit as st
-import gspread
-from google.oauth2.service_account import Credentials
 import pandas as pd
-
-# Chemin du fichier JSON (directement spécifié ici)
-json_file_path = "smart-ratio-417418-126d06ea07c6.json"  # Remplacez par le chemin correct si nécessaire
-
-# Vérifiez si le fichier existe
-try:
-    with open(json_file_path) as f:
-        pass
-except FileNotFoundError:
-    st.error(f"Le fichier JSON à l'emplacement {json_file_path} est introuvable.")
-    raise
-
-print(f"Le fichier JSON a été trouvé à l'emplacement : {json_file_path}")
-
-# Portée de l'API Google Sheets
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-
-# Charger les informations d'identification à partir du fichier JSON
-creds = Credentials.from_service_account_file(json_file_path, scopes=scope)
-
-# Autoriser l'accès via gspread
-client = gspread.authorize(creds)
-
-# Lire les données de Google Sheets
-def get_data_from_sheets(sheet_id, sheet_name):
-    # Utilisation de 'client' déjà autorisé pour accéder aux données
-    sheet = client.open_by_key(sheet_id).worksheet(sheet_name)
-
-    # Obtenir toutes les données de la feuille
-    data = sheet.get_all_records()
-
-    # Convertir les données en DataFrame
-    df = pd.DataFrame(data)
-    return df
 
 # Application Streamlit
 def app():
     st.title("Application de Visualisation des Données Clients")
 
-    # Demander l'ID de la feuille Google Sheets
-    sheet_id = st.text_input("Entrez l'ID de votre Google Sheets:", "")
+    # Demander à l'utilisateur de télécharger un fichier CSV ou Excel
+    uploaded_file = st.file_uploader("Téléchargez votre fichier (CSV ou Excel)", type=["csv", "xlsx"])
 
-    # Demander le nom de la feuille dans le fichier Google Sheets
-    sheet_name = st.text_input("Entrez le nom de la feuille (onglet) à afficher:", "Sheet1")
-
-    if sheet_id and sheet_name:
+    if uploaded_file is not None:
         try:
-            # Charger les données de la feuille Google Sheets
-            df = get_data_from_sheets(sheet_id, sheet_name)
-            st.write("Données de la feuille sélectionnée :", df)
+            # Détecter le type de fichier téléchargé (CSV ou Excel)
+            if uploaded_file.name.endswith(".csv"):
+                df = pd.read_csv(uploaded_file)
+            elif uploaded_file.name.endswith(".xlsx"):
+                df = pd.read_excel(uploaded_file)
+
+            st.write("Données du fichier téléchargé :", df)
 
             # Proposer une colonne pour filtrer les valeurs
             column_to_filter = st.selectbox("Choisissez la colonne pour filtrer les valeurs :", df.columns)
