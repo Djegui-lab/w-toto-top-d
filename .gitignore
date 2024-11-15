@@ -15,7 +15,7 @@ __pycache__/
 #.idea/
 
 # Fichier .env (variables d'environnement locales)
-.env
+#.env
 
 # Ignorer les fichiers de test
 test.py
