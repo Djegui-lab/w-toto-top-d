@@ -1,0 +1,19 @@
+# Dossier contenant les credentials (clés API, fichiers JSON sensibles)
+# Ignorer les fichiers sensibles (JSON, .env, etc.)
+courtier-devis-automatique-e47e170f58f7.json
+
+
+# Environnement virtuel
+myen/
+#venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+
+# Configuration spécifique à l'IDE
+#.vscode/
+#.idea/
+
+# Fichier .env (variables d'environnement locales)
+.env
