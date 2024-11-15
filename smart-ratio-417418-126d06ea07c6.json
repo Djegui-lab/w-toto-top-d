@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smart-ratio-417418",
+  "private_key_id": "126d06ea07c6b86abd99c0090ca9f2650ceb028e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDiZg3XzZrxvB1i\nMvHTl4epxOn5FKHv4e7tAqgSW5uK+p1ADKzApVMqX5gpTyZfa97ytKJBriAoKOlI\nxsgaosTqkXhizpwgtXdKhuN83Do18voY5RYaMdTbNaylJe/UgFM4GOPwCF7reGWk\nP9yTCW8pyNDNabvckbGtAFJ4viqtZ+wk5/Lok+ZBzXjyk8RjcYJMSV2UQyfeJuWE\nodOhTQxM4P4VKlUF2pcmlolybWpwRWbm90GAeb6YxB1h8p1GKziySPezVDQHAFWj\nmpPI3VnzEhTyD9b/RLTflw3IY2mBQu2yBDkTSxWsb4jmGS8Ac2FihQdXkqiCV88Q\nO7wgmurrAgMBAAECggEAGC+GfLkyZhmjr/O49tLiGMZNp8txo0KTzM5drccLM5/N\n6w46Pu2fwqU/XZu0LI8bBvrktzcxUz5PnEk0Dk2400WNbUzHdre8Ededd3TADoxc\nSwrfahaht8tLnBbp6zMhm3AOmvwMm9jFpEl4OF2nz6MW1KLeK/7afXH33X3p6ZKU\nPLEOUSpBQrA50vMNAdH+KfGuVAvpNeoDWMvWdAKHwmFFhTUBVxz6bjICe8gRjFCV\nuDAXuT/iDTI/vUDRD90ndGRF3rwBHJ+kYfjUeI+dalem0cwDGabEDEqVBMqw+zqY\nV/sGmO5PK7/D19nfKjCU3BPk/WrIJgBUAtP7DI+YpQKBgQD3/B7q9TZWcjexTV+Q\nWmyoV2NK+w+PF7P5NM0HTTQUTsOMbp0GjWxjQPzd41RAmmGwTjtXHNXEYy4t9yy2\nxjuqsW+PNzBMGBLh33G0hGimBoI7tWLXTkFhFKdLs1nz+/n2AR4zq08Ywn8Z1boe\nizt54cbPfowRe2Ad9VJLFDmeBwKBgQDpt1MTupIe/ZjSB5G6DthT3JakjYdJEbRS\npZtVLHrG+VeUk84imALjUZ3QU7O8xw6xzwvpXXUEOB9Aqkj1Eg4clpHjk2TxbGX3\nGUH4YSy/zBPGx40M8L7EIBxZtHdgbOSl3HJOqQsnGhw6yiCoq8h7WVjHAHhE6M7f\nTLnynbjS/QKBgQCWW0+DtlnT4DzUS819gNYQ26tgcwjkAcMlflYx7yV8iqUWKJsc\ntfLZ2zV2c7dJ1FEWzNg94UXbZSdCx3Nc/qR+wkaZ1yR5fr80JH6UrROmVpvwB/J+\nCPyrGBK3W29W95h/B/5/5YZ3xLW7vFK04kaVh8c7V8clcmC8yVm0G/czUQKBgQCe\nN3rIKk9tJ2RjGriuagpMi1J3x0/ESXX3VSEYwenD9VwyuvSbOqkJ1mCtfVx5+Y+b\nE30O2DO1TYDqt9x3+2cON2g/1bJKNYW5h6G/UZmHpdHliYWVMw0RnGNU3vTJlC4d\nkmTXl1xzdhuSOO9vAAvSZSPSZCEHFUumozxmYBuUyQKBgEEA2u3FKM47XjbZXnfg\nQJIdoZWRpXQopv+8e3kcw/Hc9TID3pe8l+YkQYVivaRQPmgfQbrLSF1JiCVUtKHg\nOjVVVxTq030Q9P0AsJX6fooAr9xPGgRnsSncumBkHucvyl3iOfRTlbOZi/kHC8RZ\n6Z7BvRM+ALP9n7MxhNQ0TAjP\n-----END PRIVATE KEY-----\n",
+  "client_email": "sendmydevis@smart-ratio-417418.iam.gserviceaccount.com",
+  "client_id": "102708461269355495738",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sendmydevis%40smart-ratio-417418.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
