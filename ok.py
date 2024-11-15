@@ -4,9 +4,14 @@ from google.oauth2.service_account import Credentials
 import pandas as pd
 import os
 
+# Récupérer le chemin du fichier JSON via la variable d'environnement
 json_file_path = os.getenv("GOOGLE_SHEETS_JSON_PATH")
+
+# Vérifiez si le fichier existe
 if not json_file_path or not os.path.exists(json_file_path):
-    raise FileNotFoundError("Le fichier JSON est introuvable ou la variable d'environnement n'est pas définie.")
+    raise FileNotFoundError(f"Le fichier JSON à l'emplacement {json_file_path} est introuvable ou la variable d'environnement n'est pas définie.")
+
+print(f"Le fichier JSON a été trouvé à l'emplacement : {json_file_path}")
 
 # Portée de l'API Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
