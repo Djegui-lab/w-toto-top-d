@@ -8,7 +8,7 @@ def load_data(sheet_name="Sheet1"):
     try:
         # Définissez les autorisations et l'accès au fichier JSON de clé d'API
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        credentials = ServiceAccountCredentials.from_json_keyfile_name("smart-ratio-417418-126d06ea07c6.json", scope)
+        credentials = ServiceAccountCredentials.from_json_keyfile_name("test-wague-9a205da3c6ca.json", scope)
 
         # Authentification avec les informations d'identification
         gc = gspread.authorize(credentials)
