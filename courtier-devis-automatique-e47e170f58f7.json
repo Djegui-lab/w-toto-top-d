@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "courtier-devis-automatique",
+  "private_key_id": "e47e170f58f79eb3f7e7a625829cab6989b45199",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7XXCB72lLILJN\nENokBJAxgScSniEb4JAs634MscslHO9Z0a4hKJoeYW9CbjGk/6+nL2chA6qeWaAl\noBFEuCjPWze80Wq8lAXATrAJWbCuvbffJkbpVKTqNAuwXCaYcy4PbMXiANq8T/SR\naueMc5bJwLMiosC7m1qb0duHvuGBdVA6dM9EDwDiYPnWj56mwZGza8QbhdNdYC5J\n1G7Po3db2dZMPDKqTSLBbkm8FdshULXHLnEj63csOrLqJ55hDhgXLGjqxqF8L7WD\n9QUWcZNCIbtnvC3ZVYVWofxz8votwM17zEAFS4cob1sJmL8pbyAzgGhbPWR/uP4q\nBraRW+lbAgMBAAECggEAEe5fVhATg50dc0KpncjSA+rYUm/Pu1tCcQoYhh590o9y\nWKY4g/PezAmHHFRva9sMdHOU6xPuwDjTmsY24Ny/CxkvvGJOVL3VzxG4xyxOPGrr\nre972di/76oLdFVdXDmprtA6H+b1CBCe10vj3Q0y4RwQCMCKsWmswjzTRap+6mSl\ntl9R8beSZSB9l7dVKgOsVHTSC4rBsKJ0QnQFi+0QJFU2e/I4rvcIUldDygyqnJaJ\nLUQnSPO3E7/W0kaY8bI0ofhpH9vBtYV/5CPDKSvbjspRK7A+i46JkuE723eEXlLr\n/BI0SxSCvFjvFY/hdbL4okLvVeH8ER4vEjJ1QlzoAQKBgQDug9OJX3qNt1N33FJn\neKzIZGXsyAo3kOFCDwcFk7Yo/WemvuYIm679POIs5lbcB9t7pd3oUm8AFiSDCc8a\nK2r9ZWlwXdHIGRHbvE3L8jt7k78bhgtpHWCDl2Zw0edcjeQESxmwrY+5jRQ/8onO\nEkrZO2mLyZ7FbbDebE2HO/5KowKBgQDJGbCbZs3AXTh/ru+g68LlDvnSFjnDK6xv\n8qCtJ5NYG51/1NFnZXyLA0IRBrUCo9ws6enRbR5sVSa8MryhQj5GR27tHG5BK/cZ\nYu7DEAGnkreGKsaODGcVR+8wVs48FHZ80rsI7EWwLx/dHFM6AWjqrIPbjkzovV5S\nAuKtLXDJ6QKBgEs57LgBEygrT/oX1S2pU+WINNVvajmISmOJVc+efO+ErPJcdzTz\n1UctsrAyneab28+tysWBalz+ntlteJJqaz4shArarFWOAqHpTCgs6DHbsYS+zE6E\n43HdiIPA0FXSsr3f6eRdeV0ub9qTZn9GKbFGGc3q81aVeBlO00z50QQ9AoGBALl+\nc9P0MMdGdY35K9nwffZRKQirLZ6kU0tzrtfpUFUOK+o0wO8xwn5rg+42lJKZ2Map\nAN8HWu+sX61q02mfs9eZnm0iM2T0C9oj0n6k7hHHGHeuTzXJpPARSUT6XQM4EM80\nhgdGAUXxQd/vd6likYcdmAbWLITl3/Gf7by11Hq5AoGBAJnvw3jUQ0T7+2qOrAFG\nO3Tw9XCumO/8oCeMwmZP5PpHTcnORaQSE3yGnbVLyk7DeFOrtK3ftmHYADkpegS7\njGr+rX53vVtW+kmX7eOZC3EvR3AyC/1Onm29YY56YT8gg4wkyxn+JGw5n+sosaKP\nooFv+QeZxE7IuupIb+VZ2mxN\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlesheetsenddevis@courtier-devis-automatique.iam.gserviceaccount.com",
+  "client_id": "102355385981792255076",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlesheetsenddevis%40courtier-devis-automatique.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
