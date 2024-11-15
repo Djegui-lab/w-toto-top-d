@@ -2,7 +2,7 @@ import streamlit as st
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
-
+import os
 # Définir le chemin du fichier JSON directement
 json_file_path = "courtier-devis-automatique-e47e170f58f7.json"
 
