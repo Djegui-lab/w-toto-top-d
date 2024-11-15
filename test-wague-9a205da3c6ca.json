@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "test-wague",
+  "private_key_id": "9a205da3c6ca42151d7223e4523c159f5cd3ce3f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDKv84lAoEuimLv\nNa3wywFkDZHL97WKqt5/7vzPjHixhrzEdVZXvtQm5tnDpAVuA2UzH5z1eo/vRRFQ\nnsyB07F/owUnKjr02ZCi6H266niysjsWu8d3pPxBUcq9m7auXNPUOsymQ6DpInvH\n4Pw3otEPMpn/JaMuTCXn7VdAJEHfo/obsEKTJpUxHm7n7RFy7eQeCU3bkXIK+J4z\n7TGy05SCUuz+5V4M22jImrtUqr6u9cBzQdaHT6XgHvDQD60ZTGSbXU7/5i7D7wio\nz7J5qiq3YQAIEZhycu5f+6H0SHkCq04YxrQrws0Q63fouQ7tcaxH7Op7Mjhla0Y+\nUqQUr8oFAgMBAAECggEAYzcaQz0nByXcRS/RByjobNRBGP2GXq3ABP3nxA77DvCe\n1kqPLpApFEJapSTSLWRG9Q4OyoeoANAdKYUUEaIM1adqQaCmSiRfZYD86eeMmfGi\n/bx1X2Sitro2SrP04P13AX+mnuQwTXW8+fJsqjMoN9YsytFZubG0yPp5fF9hxvSB\n2SkGxMUJWkpym15dYQMLXmkkQ382zbXfoeAgncSfijidUsyDDPpNzTFcL/cEul4P\nk2awS4KusRH/SXJefcG4mvZ4l8JWDUlnOIveY2hEuMlD5mKtN/bXZ4DAXOddV0pt\nztEzbu30dUvZuSJzWhpbZPY0GthiR1CrqPWHDL6zHwKBgQDk+w8W2EzgA1VmCOeq\n/uZ4v+M/LkxvzlI51i47W+WDVOoJ60JmXpleYQzNN6HSTP+RgbVgC/8uQ+esO+aN\nFvYo/h9hWAQ2/APH9HvDgBgAi3FChwt/HKHDtvuPFGD8eBoGeNK1dsjKOTIy0S6p\nPdxbbgjf7z81rtjEBQqy3SAgIwKBgQDirFvWDWHUsuO/pV5LXKYrrSukxOCzByyj\nNrfFKiy05d6+NesbFCus+XCRWecyNbFgG4ezIm0kdqAM2JKa6tbDRyKPaNqnTR8x\nutQt8il6dE4ea9iK4UPuTGMXt/2ILrEWwzMKw2nnzeIHJwyO/Y3GxdWNdjy4HrMF\ncQ6AMBh7twKBgCYwQNn8hQWvSKTVw11fWay1w/6biB/1dv0yXU+FCggXN1kkJVTR\nXh7BbNMk/hYGxXDNAyTbm1lp9c9hxhetxqwbhbxEY5+P9El62tFGIbqlhuQjhaVT\nbx8m+1lneq1gkmaV6/5bqy0e0OJsxK1xJbkR5uUCD7ayTHCUrq4Z9uulAoGBAKPA\nooOrnT5ckb2UiN9mqkEpVDsvY6jSCQRL9kzAoBV7bwP4zcT9OGQ4u4K18RjLwz1M\nBid6OmC6NfuxxY+XEdl3HVd/B18PjvaNItWieSaWuQyvGnuSK1IO6xNqfwUPvi1U\njR48d9jXWm+SXTc7o12y9AjDHzBgNTI8L56ZoEZXAoGBANE1w/qdYgLS+WPdR+oI\n+fK+Xhzk1/17p+AVztNH89u7b4xkyry4fihK94PxDbaD9WDNv2mPySKj2DmM85Ci\nVXvp/53rlj83Jrazh+NJB8J0vRg90q31kUO4HFoSu0cFSzbSEJKiyfeRkuZhajMO\nFxeFB2je6MX3DvLUB+qq5a0Z\n-----END PRIVATE KEY-----\n",
+  "client_email": "apprendre@test-wague.iam.gserviceaccount.com",
+  "client_id": "103145154405823018446",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/apprendre%40test-wague.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
