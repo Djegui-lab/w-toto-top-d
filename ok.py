@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from oauth2client.service_account import ServiceAccountCredentials
 import requests
+import gspread
 
 
 def load_data():
