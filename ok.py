@@ -57,14 +57,13 @@ def app():
             # Afficher les données filtrées
             filtered_df = df[df[column_to_filter] == selected_value]
             st.write(f"Données filtrées par {column_to_filter} = {selected_value} :", filtered_df)
-            
+
         except Exception as e:
             st.error(f"Erreur : {e}")
 
 # Lancer l'application Streamlit
 if __name__ == "__main__":
     app()
-
 
 
 # streamlit run ok.py
