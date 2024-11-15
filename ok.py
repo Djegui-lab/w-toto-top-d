@@ -1,38 +1,32 @@
 import streamlit as st
 import pandas as pd
 
-# Application Streamlit
-def app():
-    st.title("Application de Visualisation des Données Clients")
 
-    # Demander à l'utilisateur de télécharger un fichier CSV ou Excel
-    uploaded_file = st.file_uploader("Téléchargez votre fichier (CSV ou Excel)", type=["csv", "xlsx"])
+def load_data():
+    # Définissez les autorisations et l'accès au fichier JSON de clé d'API
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    credentials = ServiceAccountCredentials.from_json_keyfile_name("smart-ratio-417418-126d06ea07c6.json", scope)
 
-    if uploaded_file is not None:
-        try:
-            # Détecter le type de fichier téléchargé (CSV ou Excel)
-            if uploaded_file.name.endswith(".csv"):
-                df = pd.read_csv(uploaded_file)
-            elif uploaded_file.name.endswith(".xlsx"):
-                df = pd.read_excel(uploaded_file)
+    # Authentification avec les informations d'identification
+    gc = gspread.authorize(credentials)
 
-            st.write("Données du fichier téléchargé :", df)
+    # Ouvrir la feuille de calcul par son nom ou URL
+    # Remplacez "Nom de votre feuille" par le nom de votre propre feuille ou l'URL
+    worksheet = gc.open("courtier").sheet1
 
-            # Proposer une colonne pour filtrer les valeurs
-            column_to_filter = st.selectbox("Choisissez la colonne pour filtrer les valeurs :", df.columns)
+    # Lire les données de la feuille de calcul
+    data = worksheet.get_all_values()
 
-            # Sélectionner des valeurs spécifiques pour filtrer les données
-            unique_values = df[column_to_filter].unique()
-            selected_value = st.selectbox("Choisissez une valeur à afficher :", unique_values)
+    # Convertir les données en un DataFrame pandas
+    df = pd.DataFrame(data[1:], columns=data[0])
 
-            # Afficher les données filtrées
-            filtered_df = df[df[column_to_filter] == selected_value]
-            st.write(f"Données filtrées par {column_to_filter} = {selected_value} :", filtered_df)
+    return df
 
-        except Exception as e:
-            st.error(f"Erreur : {e}")
+data = load_data()
 
-# Lancer l'application Streamlit
-if __name__ == "__main__":
-    app()
+
+st.title("Application web pour l'analyse de données( en temps réel )")
+
+# Afficher les données dans une table
+st.write("AUTEUR : DJEGUI-WAUE")
 
