@@ -50,38 +50,48 @@ spreadsheet_id = os.environ.get("SPREADSHEET_ID")
 if not spreadsheet_id:
     st.error("L'ID de la feuille Google Sheets est manquant dans les variables d'environnement.")
     raise Exception("Spreadsheet ID is missing.")
+    
+# Nom de la feuille dans le fichier Google Sheets
+sheet_name = "message_de_suivis_devis"  # Nom exact de votre feuille
 
-sheet_name = "message_de_suivis_devis"  # Nom de la feuille (peut être conservé en dur si constant)
-
-# Utiliser l'API Google Sheets pour interagir avec la feuille
-
-
-# Fonction pour enregistrer dans Google Sheets
-def enregistrer_dans_sheets(genre,nom_client,email_destinataire,modele_selectionne,courtier_nom,motif_resiliation,formule,montant_mensuel,compagnie):
+def enregistrer_dans_sheets(genre, nom_client, email_destinataire, modele_selectionne, courtier_nom, motif_resiliation, formule, montant_mensuel, compagnie):
     try:
-        # Détermine la feuille "Message de suivi de devis"
-        feuille = sheet_name.worksheet("message_de_suivis_devis")
-        
-        # Données à enregistrer
+        # Déterminer la date et l'heure actuelles
         date_heure = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        # Préparer les données à enregistrer
         donnees = [
             date_heure,                  # Colonne A
             genre,                       # Colonne B
             nom_client,                  # Colonne C
             email_destinataire,          # Colonne D
-            modele_selectionne,  
-            courtier_nom if courtier_nom else "" ,        # Colonne E
-            motif_resiliation or "",     # Colonne F : si vide, passe une chaîne vide
-            formule if formule else "",  # Colonne G
-            montant_mensuel if montant_mensuel else "",  # Colonne H
-            compagnie if compagnie else ""                          # Colonne I
-        ]        
-        # Ajouter les données sur la prochaine ligne vide
-        feuille.append_row(donnees)
+            modele_selectionne,          # Colonne E
+            courtier_nom or "",          # Colonne F
+            motif_resiliation or "",     # Colonne G
+            formule or "",               # Colonne H
+            montant_mensuel or "",       # Colonne I
+            compagnie or ""              # Colonne J
+        ]
 
-        return "Les données ont été enregistrées dans la feuille 'Message de suivi de devis'."
+        # Définir le corps de la requête
+        body = {
+            "values": [donnees]  # Les données doivent être sous forme de liste de listes
+        }
+
+        # Ajouter les données dans la feuille avec la méthode `values().append`
+        result = service.spreadsheets().values().append(
+            spreadsheetId=spreadsheet_id,
+            range=f"{sheet_name}!A1",   # Plage cible (elle commence à A1, mais s'ajustera automatiquement)
+            valueInputOption="USER_ENTERED",  # Les valeurs seront interprétées comme si elles étaient saisies manuellement
+            body=body
+        ).execute()
+
+        # Retourner un message de confirmation
+        return f"Les données ont été enregistrées avec succès dans la feuille '{sheet_name}'."
+    
     except Exception as e:
-        return f"Erreur lors de l'enregistrement dans Google Sheets: {e}"
+        # Retourner une erreur détaillée
+        return f"Erreur lors de l'enregistrement dans Google Sheets : {e}"
 
 
 
