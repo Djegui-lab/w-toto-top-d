@@ -453,3 +453,45 @@ if st.button("Envoyer l'email"):
                 
     else:
         st.error("Veuillez remplir tous les champs.")  # Message d'erreur si des champs sont manquants
+
+
+
+
+
+def app():
+    st.title("Tableau de bord principal")
+
+    # Autres fonctionnalités de votre deuxième application
+    st.write("Voici votre tableau de bord pour gérer vos données et fonctionnalités.")
+
+    # Ajoutez ici votre bouton avec le lien stylé
+    st.markdown(
+        """
+        <div style='text-align: center; margin-top: 20px;'>
+            <a href="https://assurgestions-95ce048d8f69.herokuapp.com/" target="_blank" style="
+                text-decoration: none; 
+                background-color: #4CAF50; 
+                color: white; 
+                padding: 10px 20px; 
+                font-size: 18px; 
+                font-weight: bold; 
+                border-radius: 8px; 
+                display: inline-block;
+                transition: all 0.3s ease;">
+                🚀 Suivi des performances courtiers 🚀
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.write(
+        """
+        🌟 Cliquez sur le bouton ci-dessus pour accéder au tableau de suivi des performances des courtiers 
+        en assurance auto. Visualisez et analysez facilement les données ! 🌟
+        """
+    )
+
+if __name__ == "__main__":
+    app()
+
